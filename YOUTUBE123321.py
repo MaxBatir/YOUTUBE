@@ -3,10 +3,10 @@ from time import sleep
 class User:
     def __init__(self, nickname, password, age):
         self.nickname = nickname
-        self.password = self.hash_password(password)
+        self.password = password
         self.age = age
 
-    def hash_password(self, password):
+    def hash(self, password):
         return hash(password)
 
     def __str__(self):
